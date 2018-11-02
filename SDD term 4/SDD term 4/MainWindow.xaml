@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Image Margin="10,303,647.333,9.667" Source="SoftCorp Logo V1.jpg" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Height="83" Margin="192,10,0,0" TextWrapping="Wrap" Text="Appointmaster V1" VerticalAlignment="Top" Width="417" FontSize="36" FontWeight="Bold" TextAlignment="Center"/>
+        <Button Content="Roster" HorizontalAlignment="Left" Height="33" Margin="250,98,0,0" VerticalAlignment="Top" Width="301"/>
+        <Button Content="New appointment" HorizontalAlignment="Left" Height="33" Margin="250,136,0,0" VerticalAlignment="Top" Width="301"/>
+        <Button Content="Appointment viewer and print" HorizontalAlignment="Left" Height="33" Margin="250,174,0,0" VerticalAlignment="Top" Width="301"/>
+        <Button Content="Search and delete" HorizontalAlignment="Left" Height="33" Margin="250,212,0,0" VerticalAlignment="Top" Width="301"/>
+
     </Grid>
 </Window>
