@@ -11,7 +11,7 @@
         <CollectionViewSource x:Key="appointmentsViewSource" Source="{Binding Appointments, Source={StaticResource appointmentsDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource appointmentsViewSource}">
-        <DataGrid x:Name="appointmentsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="36,28,45.333,60.667" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <DataGrid x:Name="appointmentsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="40,31,42,57" RowDetailsVisibilityMode="VisibleWhenSelected" SelectionChanged="appointmentsDataGrid_SelectionChanged" SelectedIndex="1" Cursor="Arrow" IsSynchronizedWithCurrentItem="{Binding ID}">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="iDColumn" Binding="{Binding ID}" Header="ID" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="doctorColumn" Binding="{Binding Doctor}" Header="Doctor" Width="SizeToHeader"/>
