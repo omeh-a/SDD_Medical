@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace SDD_term_4
 {
@@ -24,5 +25,30 @@ namespace SDD_term_4
         {
             InitializeComponent();
         }
+
+
+        private void rosterbutton_Click(object sender, RoutedEventArgs e)
+        {
+            RosterWindow rWindow = new RosterWindow();
+            rWindow.Show();
+
+            if (File.Exists("roster.txt") == true)
+            {
+                
+            } else
+            {
+               // MessageBox.Show("Roster not found");
+                
+            }
+        }
+
+        private void aptviewerbutton_Click(object sender, RoutedEventArgs e)
+        {
+            AppointmentViewer aptWindow = new AppointmentViewer();
+            aptWindow.Show();
+        }
     }
 }
+
+
+
