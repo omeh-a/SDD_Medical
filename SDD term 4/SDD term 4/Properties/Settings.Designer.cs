@@ -32,5 +32,29 @@ namespace SDD_term_4.Properties {
                 return ((string)(this["AppointmentsConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"C:\\Documents\\AppointMaster\\roster.txt\"")]
+        public string RosterDirectory {
+            get {
+                return ((string)(this["RosterDirectory"]));
+            }
+            set {
+                this["RosterDirectory"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\"C:\\Documents\\\"")]
+        public string WorkingDirectory {
+            get {
+                return ((string)(this["WorkingDirectory"]));
+            }
+            set {
+                this["WorkingDirectory"] = value;
+            }
+        }
     }
 }

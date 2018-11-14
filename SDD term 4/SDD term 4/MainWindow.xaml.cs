@@ -24,6 +24,14 @@ namespace SDD_term_4
         public MainWindow()
         {
             InitializeComponent();
+
+            if (File.Exists(Properties.Settings.Default.WorkingDirectory + "AppointMaster\\")) 
+            {
+                MessageBox.Show("Working from " + Properties.Settings.Default.WorkingDirectory + "AppointMaster\\");
+            } else
+            {
+                MessageBox.Show("Warning: Working directory is not found. Check Settings to set directory");
+            }
         }
 
 
@@ -46,6 +54,14 @@ namespace SDD_term_4
         {
             AppointmentViewer aptWindow = new AppointmentViewer();
             aptWindow.Show();
+        }
+
+
+   
+        private void settingsButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.Show();
         }
     }
 }

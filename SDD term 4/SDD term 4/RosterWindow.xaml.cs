@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace SDD_term_4
 {
@@ -24,16 +25,25 @@ namespace SDD_term_4
             InitializeComponent();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-        }
-
+        
+/*
         public void GetRoster()
         {
-            // File IO operations here
+            string directory = Properties.Settings.Default.RosterDirectory;
+            try
+            {
+                using (StreamReader r = new StreamReader(directory))
+                {
+                    string line;
+                    while ((line = r.ReadLine()) != null)
+                    {
+                        ;
+                    }
+                }
+            }
+            
 
-        }
+        }*/
     }
 
 

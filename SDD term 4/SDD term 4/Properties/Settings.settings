@@ -10,5 +10,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Appointments.accdb</Value>
     </Setting>
+    <Setting Name="RosterDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"C:\Documents\AppointMaster\roster.txt"</Value>
+    </Setting>
+    <Setting Name="WorkingDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"C:\Documents\"</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
