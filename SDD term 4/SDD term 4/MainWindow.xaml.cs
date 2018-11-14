@@ -37,15 +37,15 @@ namespace SDD_term_4
 
         private void rosterbutton_Click(object sender, RoutedEventArgs e)
         {
-            RosterWindow rWindow = new RosterWindow();
-            rWindow.Show();
+            MessageBox.Show((Directory.GetCurrentDirectory()));
 
-            if (File.Exists("roster.txt") == true)
+            if (File.Exists(Directory.GetCurrentDirectory() + @"\roster.txt"))
             {
-                
+                RosterWindow rWindow = new RosterWindow();
+                rWindow.Show();
             } else
             {
-               // MessageBox.Show("Roster not found");
+                MessageBox.Show("Roster not found");
                 
             }
         }

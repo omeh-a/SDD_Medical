@@ -34,5 +34,10 @@ namespace SDD_term_4
             System.Windows.Data.CollectionViewSource appointmentsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("appointmentsViewSource")));
             appointmentsViewSource.View.MoveCurrentToFirst();
         }
+
+        private void appointmentsDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
