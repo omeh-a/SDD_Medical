@@ -35,7 +35,7 @@ namespace SDD_term_4.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"C:\\Documents\\AppointMaster\\roster.txt\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\matth\\Documents\\Appointmaster\\roster.txt")]
         public string RosterDirectory {
             get {
                 return ((string)(this["RosterDirectory"]));
@@ -47,13 +47,25 @@ namespace SDD_term_4.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"C:\\Documents\\\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\matth\\Documents\\Appointmaster\\")]
         public string WorkingDirectory {
             get {
                 return ((string)(this["WorkingDirectory"]));
             }
             set {
                 this["WorkingDirectory"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\matth\\Documents\\Appointmaster\\appointments.accdb")]
+        public string DatabaseDirectory {
+            get {
+                return ((string)(this["DatabaseDirectory"]));
+            }
+            set {
+                this["DatabaseDirectory"] = value;
             }
         }
     }

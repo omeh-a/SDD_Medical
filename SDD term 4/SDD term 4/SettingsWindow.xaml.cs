@@ -1,4 +1,9 @@
-﻿using System;
+﻿// Matthew Rossouw
+// SDD Term 4
+// Settings Window c# code for Assessment Task 1
+// Year 12, 2018/19
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

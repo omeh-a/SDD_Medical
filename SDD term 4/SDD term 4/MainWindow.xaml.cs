@@ -1,4 +1,9 @@
-﻿using System;
+﻿// Matthew Rossouw
+// SDD Term 4
+// Main Menu c# code for Assessment Task 1
+// Year 12, 2018/19
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,9 +42,9 @@ namespace SDD_term_4
 
         private void rosterbutton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show((Directory.GetCurrentDirectory()));
+            MessageBox.Show(Properties.Settings.Default.RosterDirectory);
 
-            if (File.Exists(Directory.GetCurrentDirectory() + @"\roster.txt"))
+            if (File.Exists(Properties.Settings.Default.RosterDirectory))
             {
                 RosterWindow rWindow = new RosterWindow();
                 rWindow.Show();
