@@ -38,6 +38,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,16 +63,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppointmentsDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AppointmentViewer.xaml.cs">
-      <DependentUpon>AppointmentViewer.xaml</DependentUpon>
+    <Compile Include="Apt Creation.xaml.cs">
+      <DependentUpon>Apt Creation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RosterWindow.xaml.cs">
-      <DependentUpon>RosterWindow.xaml</DependentUpon>
+    <Compile Include="RosterWindowXML.xaml.cs">
+      <DependentUpon>RosterWindowXML.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchWindow.xaml.cs">
+      <DependentUpon>SearchWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="AppointmentViewer.xaml">
+    <Page Include="Apt Creation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,7 +91,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="RosterWindow.xaml">
+    <Page Include="RosterWindowXML.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

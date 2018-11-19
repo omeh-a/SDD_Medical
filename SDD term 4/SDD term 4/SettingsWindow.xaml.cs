@@ -29,5 +29,28 @@ namespace SDD_term_4
             InitializeComponent();
             
         }
+
+        private void rosterloc_change_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.RosterDirectory = this.Roster_location_box.Text;
+        }
+
+
+
+        private void OnExit(object SettingsWindow, ExitEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
+
+        private void dbloc_change_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.DatabaseDirectory = this.Database_location_box.Text;
+        }
+
+        private void save_button_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+            MessageBox.Show("Settings saved successfully!");
+        }
     }
 }

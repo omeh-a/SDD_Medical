@@ -10,10 +10,11 @@
         <TextBlock x:Name="Setting_title" HorizontalAlignment="Left" Height="52" Margin="29,10,0,0" TextWrapping="Wrap" Text="Settings" VerticalAlignment="Top" Width="304" FontSize="36" FontWeight="Bold"/>
         <TextBlock x:Name="Roster_Location_label" HorizontalAlignment="Left" Height="27" Margin="81,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"><Run Text="    "/><Run Text="Roster "/><Run Text="location"/><Run Text=":"/></TextBlock>
         <TextBlock x:Name="Database_location_label" HorizontalAlignment="Left" Height="27" Margin="81,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105"><Run Text="Database"/><Run Text=" "/><Run Text="location"/><Run Text=":"/></TextBlock>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="22" Margin="186,82,0,0" Stroke="Black" VerticalAlignment="Top" Width="385"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="22" Margin="186,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="385"/>
-        <TextBlock x:Name="Roster_location_box" HorizontalAlignment="Left" Height="22" Margin="191,82,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="380" IsEnabled="False"/>
-        <TextBlock x:Name="Database_location_box" HorizontalAlignment="Left" Height="22" Margin="191,109,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="380" IsEnabled="False"/>
-
+        <TextBox x:Name="Roster_location_box" HorizontalAlignment="Left" Height="22" Margin="186,82,0,0" TextWrapping="Wrap" Text="{Binding Source={StaticResource Settings}, Path=Default.RosterDirectory}" VerticalAlignment="Top" Width="385"/>
+        <TextBox x:Name="Database_location_box" HorizontalAlignment="Left" Height="22" Margin="186,109,0,0" TextWrapping="Wrap" Text="{Binding Source={StaticResource Settings}, Path=Default.DatabaseDirectory}" VerticalAlignment="Top" Width="385"/>
+        <Button x:Name="rosterloc_change" Content="Change..." HorizontalAlignment="Left" Height="23" Margin="585,81,0,0" VerticalAlignment="Top" Width="114" Click="rosterloc_change_Click"/>
+        <Button x:Name="dbloc_change" Content="Change..." HorizontalAlignment="Left" Height="23" Margin="585,109,0,0" VerticalAlignment="Top" Width="114" Click="dbloc_change_Click"/>
+        <Button x:Name="save_button" Click ="save_button_Click" Content="Save" HorizontalAlignment="Left" Margin="585,369,0,0" VerticalAlignment="Top" Width="114"/>
     </Grid>
+
 </Window>

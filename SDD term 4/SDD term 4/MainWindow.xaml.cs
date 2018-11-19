@@ -29,14 +29,7 @@ namespace SDD_term_4
         public MainWindow()
         {
             InitializeComponent();
-
-            if (File.Exists(Properties.Settings.Default.WorkingDirectory + "AppointMaster\\")) 
-            {
-                MessageBox.Show("Working from " + Properties.Settings.Default.WorkingDirectory + "AppointMaster\\");
-            } else
-            {
-                MessageBox.Show("Warning: Working directory is not found. Check Settings to set directory");
-            }
+            
         }
 
 
@@ -46,7 +39,7 @@ namespace SDD_term_4
 
             if (File.Exists(Properties.Settings.Default.RosterDirectory))
             {
-                RosterWindow rWindow = new RosterWindow();
+                RosterWindowXML rWindow = new RosterWindowXML();
                 rWindow.Show();
             } else
             {
@@ -57,8 +50,8 @@ namespace SDD_term_4
 
         private void aptviewerbutton_Click(object sender, RoutedEventArgs e)
         {
-            AppointmentViewer aptWindow = new AppointmentViewer();
-            aptWindow.Show();
+            //AppointmentViewer aptWindow = new AppointmentViewer();
+            //aptWindow.Show();
         }
 
 
@@ -67,6 +60,18 @@ namespace SDD_term_4
         {
             SettingsWindow settingsWindow = new SettingsWindow();
             settingsWindow.Show();
+        }
+
+        private void newaptbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Apt_Creation aptcreator = new Apt_Creation();
+            aptcreator.Show();
+        }
+
+        private void editbutton_Click(object sender, RoutedEventArgs e)
+        {
+            SearchWindow newSearch = new SearchWindow();
+            newSearch.Show();
         }
     }
 }
