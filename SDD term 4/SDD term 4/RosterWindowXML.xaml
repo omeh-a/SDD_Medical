@@ -115,7 +115,7 @@
                 <!--Sat-->
                 <StackPanel Grid.Column="6" Margin="0" Background="DarkGray">
                     <TextBlock x:Name="SatLabel" Background="White" Text="Saturday" TextAlignment="Center"/>
-                    <TextBlock x:Name="Sat" Text="" Background="Transparent"/>
+                    <TextBlock x:Name="Sat1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Sat2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Sat3" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Sat4" Text="" Background="Transparent"/>

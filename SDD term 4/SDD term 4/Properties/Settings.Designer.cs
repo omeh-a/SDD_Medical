@@ -68,5 +68,17 @@ namespace SDD_term_4.Properties {
                 this["DatabaseDirectory"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int RosterDoctorCount {
+            get {
+                return ((int)(this["RosterDoctorCount"]));
+            }
+            set {
+                this["RosterDoctorCount"] = value;
+            }
+        }
     }
 }

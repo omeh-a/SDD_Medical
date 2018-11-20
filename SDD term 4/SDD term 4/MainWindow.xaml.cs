@@ -50,8 +50,8 @@ namespace SDD_term_4
 
         private void aptviewerbutton_Click(object sender, RoutedEventArgs e)
         {
-            //AppointmentViewer aptWindow = new AppointmentViewer();
-            //aptWindow.Show();
+            /*AppointmentViewer aptWindow = new AppointmentViewer();
+            aptWindow.Show();*/
         }
 
 

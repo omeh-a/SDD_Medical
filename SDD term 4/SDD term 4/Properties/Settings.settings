@@ -19,5 +19,8 @@
     <Setting Name="DatabaseDirectory" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Users\matth\Documents\Appointmaster\appointments.accdb</Value>
     </Setting>
+    <Setting Name="RosterDoctorCount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
