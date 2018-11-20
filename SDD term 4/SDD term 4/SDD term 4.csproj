@@ -58,10 +58,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AppointmentsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppointmentsDataSet.xsd</DependentUpon>
+    <Compile Include="AppointmentViewer.xaml.cs">
+      <DependentUpon>AppointmentViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Apt Creation.xaml.cs">
       <DependentUpon>Apt Creation.xaml</DependentUpon>
@@ -75,6 +73,10 @@
     <Compile Include="SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="AppointmentViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Apt Creation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,17 +124,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="AppointmentsDataSet.xsc">
-      <DependentUpon>AppointmentsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AppointmentsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AppointmentsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AppointmentsDataSet.xss">
-      <DependentUpon>AppointmentsDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,11 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="SoftCorp Logo V1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Appointments.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

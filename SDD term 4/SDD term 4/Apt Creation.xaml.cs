@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace SDD_term_4
 {
@@ -26,12 +27,29 @@ namespace SDD_term_4
 
         private void AptCreateButton_Click(object sender, RoutedEventArgs e)
         {
+            MakeAppointment(this.DoctorInput.Text, this.PatientInput.Text, this.DatePicker.Text, this.InfoInput.Text);
             MessageBox.Show($" Appointment Successfully created for \"{PatientInput.Text}\" under Doctor\"{DoctorInput.Text}\" on {DatePicker.Text}");
         }
 
         public void MakeAppointment(string doctor, string patient, string date, string details)
         {
-            // stub
+            //string reformattedDate = this.DatePicker.Text[]
+            string directory = $"{Properties.Settings.Default.DatabaseDirectory}{doctor}{patient}.txt";
+            try
+            {
+                using (StreamWriter w = new StreamWriter(directory))
+                {
+                    w.WriteLine("~ APPOINTMENT $");
+                    w.WriteLine($"{doctor}#{patient}##{details}$");
+                    //{(string)date}
+                    w.Close();
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message);
+            }
         }
     }
+
 }

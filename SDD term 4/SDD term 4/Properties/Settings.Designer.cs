@@ -59,7 +59,7 @@ namespace SDD_term_4.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\matth\\Documents\\Appointmaster\\appointments.accdb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\matth\\Documents\\Appointmaster\\")]
         public string DatabaseDirectory {
             get {
                 return ((string)(this["DatabaseDirectory"]));
@@ -78,6 +78,17 @@ namespace SDD_term_4.Properties {
             }
             set {
                 this["RosterDoctorCount"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\matth\\Documents\\Appointmas" +
+            "ter\\Appointments.accdb;Persist Security Info=False")]
+        public string AppointmentsConnectionString1 {
+            get {
+                return ((string)(this["AppointmentsConnectionString1"]));
             }
         }
     }

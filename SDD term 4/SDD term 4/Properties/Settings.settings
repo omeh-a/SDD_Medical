@@ -17,10 +17,18 @@
       <Value Profile="(Default)">C:\Users\matth\Documents\Appointmaster\</Value>
     </Setting>
     <Setting Name="DatabaseDirectory" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\matth\Documents\Appointmaster\appointments.accdb</Value>
+      <Value Profile="(Default)">C:\Users\matth\Documents\Appointmaster\</Value>
     </Setting>
     <Setting Name="RosterDoctorCount" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="AppointmentsConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\matth\Documents\Appointmaster\Appointments.accdb;Persist Security Info=False&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\matth\Documents\Appointmaster\Appointments.accdb;Persist Security Info=False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

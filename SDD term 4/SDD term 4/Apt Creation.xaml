@@ -29,7 +29,7 @@
                 <DatePicker x:Name="DatePicker" Text="Select date" Background="LightGray" Margin="5" />
                 
                 <TextBox x:Name="InfoInput" Text="(insert here)" Margin="5" Background="LightGray"/>
-                <Button x:Name="AptCreateButton" Background="#FFFF9380" Content="Create" Margin="5 10 80 20" Click="AptCreateButton_Click" />
+                <Button x:Name="AptCreateButton"  Background="#FFFF9380" Content="Create" Margin="5 10 80 20" Click="AptCreateButton_Click" />
             </StackPanel>
 
 

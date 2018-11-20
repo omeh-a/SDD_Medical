@@ -35,8 +35,7 @@ namespace SDD_term_4
 
         private void rosterbutton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(Properties.Settings.Default.RosterDirectory);
-
+            
             if (File.Exists(Properties.Settings.Default.RosterDirectory))
             {
                 RosterWindowXML rWindow = new RosterWindowXML();
