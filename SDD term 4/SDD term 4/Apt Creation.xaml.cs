@@ -28,19 +28,34 @@ namespace SDD_term_4
         private void AptCreateButton_Click(object sender, RoutedEventArgs e)
         {
             MakeAppointment(this.DoctorInput.Text, this.PatientInput.Text, this.DatePicker.Text, this.InfoInput.Text);
-            MessageBox.Show($" Appointment Successfully created for \"{PatientInput.Text}\" under Doctor\"{DoctorInput.Text}\" on {DatePicker.Text}");
+            MessageBox.Show($" Appointment Successfully created for \"{PatientInput.Text}\" under Doctor \"{DoctorInput.Text}\" on {DatePicker.Text}");
         }
 
         public void MakeAppointment(string doctor, string patient, string date, string details)
         {
-            //string reformattedDate = this.DatePicker.Text[]
-            string directory = $"{Properties.Settings.Default.DatabaseDirectory}{doctor}{patient}.txt";
+            string reformattedDate = (string)date;
+            reformattedDate += '$';
+            string finalDate = "";
+            int d = 0;
+            while (reformattedDate[d] != '$' )
+            {
+                if (reformattedDate[d] != '/')
+                {
+                    finalDate += reformattedDate[d];
+                } else if (reformattedDate[d] == '/')
+                {
+                    finalDate += ',';
+                }
+                d++;
+            }
+            
+            string directory = $"{Properties.Settings.Default.DatabaseDirectory}{doctor}#{patient}#{finalDate}$.apt";
             try
             {
                 using (StreamWriter w = new StreamWriter(directory))
                 {
-                    w.WriteLine("~ APPOINTMENT $");
-                    w.WriteLine($"{doctor}#{patient}##{details}$");
+                    w.WriteLine("~ APPOINTMENT  Do not edit any hashes or dollar signs $");
+                    w.WriteLine($"{doctor}#{patient}#{(string)date}#{details}$");
                     //{(string)date}
                     w.Close();
                 }

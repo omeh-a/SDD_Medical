@@ -72,6 +72,12 @@ namespace SDD_term_4
             SearchWindow newSearch = new SearchWindow();
             newSearch.Show();
         }
+
+        private void printButton_Click(object sender, RoutedEventArgs e)
+        {
+            PrintWindow newPrint = new PrintWindow();
+            newPrint.Show();
+        }
     }
 }
 
