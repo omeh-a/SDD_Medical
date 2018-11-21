@@ -12,7 +12,7 @@
             <TextBlock x:Name="Heading" Text="Roster" FontSize="40" />
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.5*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -24,7 +24,7 @@
 
                 <!--Doctor names-->
                 <StackPanel Grid.Column="0" Margin="0" Background="#FFFF9567">
-                    <TextBlock x:Name="DocLabel" Background="White" Text="Doctor" TextAlignment="Center"/>
+                    <TextBlock x:Name="DocLabel" Background="White" Text="Doctor"  />
                     <TextBlock x:Name="Name1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Name2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Name3" Text="" Background="Transparent"/>
@@ -39,7 +39,7 @@
 
                 <!--Mon-->
                 <StackPanel Grid.Column="1" Margin="0" Background="DarkGray">
-                    <TextBlock x:Name="MonLabel" Background="White" Text="Monday" TextAlignment="Center"/>
+                    <TextBlock x:Name="MonLabel" Background="White" Text="Monday"  />
                     <TextBlock x:Name="Mon1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Mon2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Mon3" Text="" Background="Transparent"/>
@@ -54,7 +54,7 @@
 
                 <!--Tue-->
                 <StackPanel Grid.Column="2" Margin="0" Background="DarkGray" >
-                    <TextBlock x:Name="TueLabel" Background="White" Text="Tuesday" TextAlignment="Center"/>
+                    <TextBlock x:Name="TueLabel" Background="White" Text="Tuesday"  />
                     <TextBlock x:Name="Tue1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Tue2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Tue3" Text="" Background="Transparent"/>
@@ -69,7 +69,7 @@
 
                 <!--Wed-->
                 <StackPanel Grid.Column="3" Margin="0" Background="DarkGray">
-                    <TextBlock x:Name="WedLabel" Background="White" Text="Wednesday" TextAlignment="Center"/>
+                    <TextBlock x:Name="WedLabel" Background="White" Text="Wednesday"  />
                     <TextBlock x:Name="Wed1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Wed2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Wed3" Text="" Background="Transparent"/>
@@ -84,7 +84,7 @@
 
                 <!--Thu-->
                 <StackPanel Grid.Column="4" Margin="0" Background="DarkGray">
-                    <TextBlock x:Name="ThuLabel" Background="White" Text="Thursday" TextAlignment="Center"/>
+                    <TextBlock x:Name="ThuLabel" Background="White" Text="Thursday"  />
                     <TextBlock x:Name="Thu1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Thu2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Thu3" Text="" Background="Transparent"/>
@@ -99,7 +99,7 @@
     
                 <!--Fri-->
                 <StackPanel Grid.Column="5" Margin="0" Background="DarkGray">
-                    <TextBlock x:Name="FriLabel" Background="White" Text="Friday" TextAlignment="Center"/>
+                    <TextBlock x:Name="FriLabel" Background="White" Text="Friday"  />
                     <TextBlock x:Name="Fri1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Fri2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Fri3" Text="" Background="Transparent"/>
@@ -114,7 +114,7 @@
 
                 <!--Sat-->
                 <StackPanel Grid.Column="6" Margin="0" Background="DarkGray">
-                    <TextBlock x:Name="SatLabel" Background="White" Text="Saturday" TextAlignment="Center"/>
+                    <TextBlock x:Name="SatLabel" Background="White" Text="Saturday"/>
                     <TextBlock x:Name="Sat1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Sat2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Sat3" Text="" Background="Transparent"/>
@@ -129,7 +129,7 @@
 
                 <!--Sun-->
                 <StackPanel Grid.Column="7" Margin="0" Background="DarkGray">
-                    <TextBlock x:Name="SunLabel" Background="White" Text="Sunday" TextAlignment="Center"/>
+                    <TextBlock x:Name="SunLabel" Background="White" Text="Sunday"  />
                     <TextBlock x:Name="Sun1" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Sun2" Text="" Background="Transparent"/>
                     <TextBlock x:Name="Sun3" Text="" Background="Transparent"/>
