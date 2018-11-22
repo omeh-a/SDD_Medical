@@ -49,8 +49,8 @@ namespace SDD_term_4
 
         private void aptviewerbutton_Click(object sender, RoutedEventArgs e)
         {
-            /*AppointmentViewer aptWindow = new AppointmentViewer();
-            aptWindow.Show();*/
+            AppointmentViewer aptWindow = new AppointmentViewer();
+            aptWindow.Show();
         }
 
 
@@ -73,11 +73,7 @@ namespace SDD_term_4
             newSearch.Show();
         }
 
-        private void printButton_Click(object sender, RoutedEventArgs e)
-        {
-            PrintWindow newPrint = new PrintWindow();
-            newPrint.Show();
-        }
+        
     }
 }
 

@@ -16,17 +16,15 @@ using System.IO;
 namespace SDD_term_4
 {
     /// <summary>
-    /// Interaction logic for AppointmentViewer.xaml
+    /// Interaction logic for DeleteWindow.xaml
     /// </summary>
-    public partial class AppointmentViewer : Window
+    public partial class DeleteWindow : Window
     {
-        public AppointmentViewer()
+        public DeleteWindow()
         {
             InitializeComponent();
-            
         }
-
-
+        
 
 
 
@@ -106,49 +104,53 @@ namespace SDD_term_4
         {
             // Looking for all .apt files
             string[] results = Directory.GetFiles(Properties.Settings.Default.DatabaseDirectory, @"*.apt");
-            List<appointment> validResults = new List<appointment>();
+            List<string> validResults = new List<string>();
             List<string> filesList = results.ToList();
             int count = (filesList.Count);
+            string targetDate = this.DatePicker.Text;
+            string targetDoc = this.DocBox.Text;
+            string targetPat = this.PatBox.Text;
+            string targetTime = this.TimeBox.Text;
             int x = 0;
 
 
-           
+            // Scouring results for target
+                
+                string finalDate = "";
+                int d = 0;
+                while (((targetDate[d] >= '0' && targetDate[d] <= '9') || (targetDate[d] == '/') || (targetDate[d] == ',')) && (d < 9))
+                {
+                    if (targetDate[d] != '/')
+                    {
+                        finalDate += targetDate[d];
+                    }
+                    else if (targetDate[d] == '/')
+                    {
+                        finalDate += ',';
+                    }
+                    d++;
+                }
+                targetDate = finalDate;
             
 
             while (x < count)
             {
-                validResults.Add(pathToApt(results[x]));
+                if (results[x].ToUpper().Contains($"{targetDoc.ToUpper()}") == true && results[x].ToUpper().Contains($"{targetDoc.ToUpper()}") && results[x].ToUpper().Contains($"{targetDate}"))
+                {
+                    validResults.Add(results[x]);
+                }
                 x++;
             }
 
-            
+            // doctor/patient check
 
             int u = 0;
-            string toShow = "";
-            
-            while (u < validResults.Count)
-            {
-            toShow += $"{validResults[u].patient} with Doctor {validResults[u].doctor} on {validResults[u].date} " +
-            $", {validResults[u].info} // at {validResults[u].time}\n";
-            u++;
-            }
-            
-            
-
-            this.ResultBox.Text = toShow;
-
+                while (u < validResults.Count)
+                {
+                File.Delete(validResults[u]);
+                u++;
+                }
+            MessageBox.Show($"Successfully deleted {u} files.");
         }
     }
-
-    public struct appointment
-    {
-        public string doctor;
-        public string patient;
-        public string date;
-        public string info;
-    }
-    
-
-
-
 }

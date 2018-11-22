@@ -64,9 +64,10 @@
     <Compile Include="Apt Creation.xaml.cs">
       <DependentUpon>Apt Creation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PrintWindow.xaml.cs">
-      <DependentUpon>PrintWindow.xaml</DependentUpon>
+    <Compile Include="DeleteWindow.xaml.cs">
+      <DependentUpon>DeleteWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Doomsday.cs" />
     <Compile Include="RosterWindowXML.xaml.cs">
       <DependentUpon>RosterWindowXML.xaml</DependentUpon>
     </Compile>
@@ -84,6 +85,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DeleteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,10 +101,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PrintWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="RosterWindowXML.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

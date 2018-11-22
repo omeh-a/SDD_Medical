@@ -30,12 +30,21 @@ namespace SDD_term_4
         {
             this.PatCheckBox.IsChecked = true;
             this.DocCheckBox.IsChecked = false;
+            this.DateCheckBox.IsChecked = false;
         }
 
         private void DocCheckBox_Click(object sender, RoutedEventArgs e)
         {
             this.PatCheckBox.IsChecked = false;
             this.DocCheckBox.IsChecked = true;
+            this.DateCheckBox.IsChecked = false;
+        }
+
+        private void DateCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            this.PatCheckBox.IsChecked = false;
+            this.DocCheckBox.IsChecked = false;
+            this.DateCheckBox.IsChecked = true;
         }
 
 
@@ -46,6 +55,8 @@ namespace SDD_term_4
             public string patient;
             public string date;
             public string info;
+            public string duration;
+            public string time;
         }
 
         public appointment pathToApt(string directory)
@@ -87,6 +98,14 @@ namespace SDD_term_4
                                 {
                                     apt.info += line[i];
                                 }
+                                else if (e ==4)
+                                {
+                                    apt.duration += line[i];
+                                }
+                                else if (e == 5)
+                                {
+                                    apt.time += line[i];
+                                }
                                 i++;
                             }
                         }
@@ -113,7 +132,25 @@ namespace SDD_term_4
 
 
             // Scouring results for target
-            
+            if (DateCheckBox.IsChecked == true)
+            {
+                string finalDate = "";
+                int d = 0;
+                while (((target[d] >= '0' && target[d] <= '9') || (target[d] == '/') || (target[d] == ',')) && (d < 9))
+                {
+                    if (target[d] != '/')
+                    {
+                        finalDate += target[d];
+                    }
+                    else if (target[d] == '/')
+                    {
+                        finalDate += ',';
+                    }
+                    d++;
+                }
+                target = finalDate;
+            }
+
             while (x < count)
             {
                 if (results[x].ToUpper().Contains($"{target.ToUpper()}") == true)
@@ -133,8 +170,11 @@ namespace SDD_term_4
                 {
                     if (validResults[u].doctor.ToUpper() == target.ToUpper())
                     {
-                        toShow += $"{validResults[u].patient} with Doctor {validResults[u].doctor} on {validResults[u].date}: {validResults[u].info}\n";
+                        toShow += $"{validResults[u].patient} with Doctor {validResults[u].doctor} on {validResults[u].date}, " +
+                        $", {validResults[u].info}\n";
                     }
+                                            
+                
                     u++;
                 }
             }
@@ -142,10 +182,22 @@ namespace SDD_term_4
             {
                 while (u < validResults.Count)
                 {
-                    if (validResults[u].patient.ToUpper() == target.ToUpper())
+                    if (validResults[u].doctor.ToUpper() == target.ToUpper())
                     {
-                        toShow += $"{validResults[u].patient} with Doctor {validResults[u].doctor} on {validResults[u].date}: {validResults[u].info}\n";
+                        toShow += $"{validResults[u].patient} with Doctor {validResults[u].doctor} on {validResults[u].date}, " +
+                     $", {validResults[u].info}\n";
                     }
+                    u++;
+                }
+            }
+            else if (this.DateCheckBox.IsChecked == true)
+            {
+                
+
+                    while (u < validResults.Count)
+                {
+                    toShow += $"{validResults[u].patient} with Doctor {validResults[u].doctor} on {validResults[u].date}, " +
+                    $" {validResults[u].info} // At {validResults[u].time}.\n";
                     u++;
                 }
             }
@@ -153,10 +205,12 @@ namespace SDD_term_4
             this.ResultBox.Text = toShow;
 
         }
-        
 
-
-
+        private void summonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteWindow newDelete = new DeleteWindow();
+            newDelete.Show();
+        }
     }
 }
 

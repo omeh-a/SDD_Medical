@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SDD_term_4"
         mc:Ignorable="d"
-        Title="SearchWindow" Height="450" Width="650">
+        Title="SearchWindow" Height="709.093" Width="805.502">
     <Border Margin="20 50 20 20">
         <StackPanel>
             <TextBlock x:Name="Heading" Text="Search" FontSize="40" FontWeight="Bold" Margin="40 0 0 0" />
@@ -19,14 +19,20 @@
                 <StackPanel Margin="30" Grid.Column="0">
                     <CheckBox x:Name="DocCheckBox" Content="Doctor" HorizontalAlignment="Center" IsChecked="True" Click="DocCheckBox_Click"/>
                     <CheckBox x:Name="PatCheckBox" Content="Patient" HorizontalAlignment="Center" IsChecked="False" Click="PatCheckBox_Click"/>
+                    <CheckBox x:Name="DateCheckBox" Content="__Date  " HorizontalAlignment="Center" IsChecked="False" Click="DateCheckBox_Click"/>
+                    <CheckBox x:Name="WeekCheckBox" Content="_Week  " HorizontalAlignment="Center" IsChecked="False" Click="DateCheckBox_Click"/>
                 </StackPanel>
                 <StackPanel Margin="30" Grid.Column="1">
                     <TextBox x:Name="SearchBox" Text="(Enter search term here)" HorizontalAlignment="Left" Padding="5 5 5 5" />
                     <Button x:Name="SearchButton" Content="Search" Margin="0 10 80 0" Click="SearchButton_Click" />
                 </StackPanel>
 
+                <StackPanel Margin="30" Grid.Column="2">
+                    <Button x:Name="summonDelete" Content="Delete..." Click="summonDelete_Click" />
+                </StackPanel>
+
             </Grid>
-            <TextBox x:Name="ResultBox" Background="LightGray" Text="(results will appear here"  Margin="40 10 40 10"/>
+            <TextBox x:Name="ResultBox" Background="LightGray" Text="(results will appear here"  Margin="40 10 40 10" />
         </StackPanel>
     </Border>
 </Window>

@@ -1,5 +1,6 @@
 ﻿<Window x:Class="SDD_term_4.Apt_Creation"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -7,6 +8,26 @@
         mc:Ignorable="d"
         Title="Apt_Creation" Height="450" Width="450
         " Background="LightGray">
+
+    <Window.Resources>
+
+        <SolidColorBrush x:Key="brushWatermarkBackground" Color="White" />
+        <SolidColorBrush x:Key="brushWatermarkForeground" Color="LightSteelBlue" />
+        <SolidColorBrush x:Key="brushWatermarkBorder" Color="Transparent" />
+
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <local:TextInputToVisibilityConverter x:Key="TextInputToVisibilityConverter" />
+
+        <Style x:Key="EntryFieldStyle" TargetType="Grid" >
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="6" />
+        </Style>
+
+    </Window.Resources>
+
+
+
     <Border Margin="20">
         <Grid>
 
@@ -18,17 +39,36 @@
 
             <StackPanel Grid.Column="0" Margin="20 10 20 10">
                 <TextBlock x:Name="DocLabel" Text="Doctor:" FontWeight="Bold" TextAlignment="Right" Margin="8"/>
-                <TextBlock x:Name="PatLabel" Text="Patient:" FontWeight="Bold" TextAlignment="Right" Margin="5"/>
-                <TextBlock x:Name="DateLabel" Text="Date:" FontWeight="Bold" TextAlignment="Right" Margin="5"/>
-                <TextBlock x:Name="InfoLabel" Text="Info:" FontWeight="Bold" TextAlignment="Right" Margin="5"/>
+                <TextBlock x:Name="PatLabel" Text="Patient:" FontWeight="Bold" TextAlignment="Right" Margin="6"/>
+                <TextBlock x:Name="DateLabel" Text="Date:" FontWeight="Bold" TextAlignment="Right" Margin="7"/>
+                <TextBlock x:Name="InfoLabel" Text="Info:" FontWeight="Bold" TextAlignment="Right" Margin="7"/>
+                <TextBlock x:Name="DurationLabel" Text="Duration:" FontWeight="Bold" TextAlignment="Right" Margin="7"/>
+                <TextBlock x:Name="TimeLabel" Text="Time (24 hour):" FontWeight="Bold" TextAlignment="Right" Margin="7"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Margin="0 10 50 10">
                 <TextBox x:Name="DoctorInput" Text="" Margin="5"/>
                 <TextBox x:Name="PatientInput" Text="" Margin="5"/>
                 <DatePicker x:Name="DatePicker" Text="" Margin="5" />
-                
-                <TextBox x:Name="InfoInput" Text="" Margin="5"/>
+
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="0" Text="Notes" Foreground="{StaticResource brushWatermarkForeground}"
+                       Visibility="{Binding ElementName=InfoInput, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox x:Name="InfoInput" Text="" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" />
+                </Grid>
+
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="0" Text="Duration in minutes" Foreground="{StaticResource brushWatermarkForeground}"
+                       Visibility="{Binding ElementName=DurationInput, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox x:Name="DurationInput" Text="" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" />
+                </Grid>
+
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="0" Text="hhmm  24 hour time" Foreground="{StaticResource brushWatermarkForeground}"
+                       Visibility="{Binding ElementName=TimeInput, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox x:Name="TimeInput" Text="" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" />
+                </Grid>
+
                 <Button x:Name="AptCreateButton"  Background="#FFFF9380" Content="Create" Margin="5 10 80 20" Click="AptCreateButton_Click" />
             </StackPanel>
 

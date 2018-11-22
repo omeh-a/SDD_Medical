@@ -4,7 +4,11 @@
              xmlns:local="clr-namespace:SDD_term_4"
              xmlns:properties="clr-namespace:SDD_term_4.Properties"
              StartupUri="MainWindow.xaml">
+    
     <Application.Resources>
         <properties:Settings x:Key="Settings" />
     </Application.Resources>
+    
 </Application>
+    
+    

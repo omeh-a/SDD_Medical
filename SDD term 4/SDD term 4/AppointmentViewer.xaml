@@ -6,11 +6,23 @@
         xmlns:local="clr-namespace:SDD_term_4"
         mc:Ignorable="d"
         Title="AppointmentViewer" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="204*"/>
-            <RowDefinition Height="217*"/>
-        </Grid.RowDefinitions>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="359" Margin="19,30,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="749"/>
-    </Grid>
+    <Border Margin="20 50 20 20">
+        <StackPanel>
+            <TextBlock x:Name="Heading" Text="Viewer" FontSize="40" FontWeight="Bold" Margin="40 0 0 0" />
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="30" Grid.Column="1">
+                    <Button x:Name="AllPrintButton" Content="Print all appointments" Margin="0 10 80 0" Click="SearchButton_Click" />
+                </StackPanel>
+
+            </Grid>
+            <TextBox x:Name="ResultBox" Background="LightGray" Text="(results will appear here"  Margin="40 10 40 10"/>
+        </StackPanel>
+    </Border>
 </Window>

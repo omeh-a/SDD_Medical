@@ -12,9 +12,8 @@
         <Button x:Name="rosterbutton" Content="Roster" HorizontalAlignment="Left" Height="33" Margin="250,98,0,0" VerticalAlignment="Top" Width="301" Click="rosterbutton_Click"/>
         <Button x:Name="newaptbutton" Content="New appointment" HorizontalAlignment="Left" Height="33" Margin="250,136,0,0" VerticalAlignment="Top" Width="301" Click="newaptbutton_Click"/>
         <Button x:Name="aptviewerbutton" Content="Appointment viewer" HorizontalAlignment="Left" Height="33" Margin="250,174,0,0" VerticalAlignment="Top" Width="301" Click="aptviewerbutton_Click"/>
-        <Button x:Name="editbutton" Content="Search and delete" HorizontalAlignment="Left" Height="33" Margin="250,250,0,0" VerticalAlignment="Top" Width="301" Click="editbutton_Click"/>
-        <Button x:Name="settingsButton" Content="Settings" HorizontalAlignment="Left" Height="33" Margin="250,288,0,0" VerticalAlignment="Top" Width="301" Click="settingsButton_Click_1"/>
-        <Button x:Name="printButton" Content="Print" HorizontalAlignment="Left" Height="33" Margin="250,212,0,0" VerticalAlignment="Top" Width="301" Click="printButton_Click"/>
+        <Button x:Name="editbutton" Content="Search and delete" HorizontalAlignment="Left" Height="33" Margin="250,212,0,0" VerticalAlignment="Top" Width="301" Click="editbutton_Click"/>
+        <Button x:Name="settingsButton" Content="Settings" HorizontalAlignment="Left" Height="33" Margin="250,250,0,0" VerticalAlignment="Top" Width="301" Click="settingsButton_Click_1"/>
 
     </Grid>
 </Window>
